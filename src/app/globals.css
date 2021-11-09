@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
 *,
 *::after,
 *::before {
@@ -15,4 +17,58 @@ p {
 
 body {
   margin: 0;
+}
+
+:root {
+  --color-primary: #42d9c8;
+  --color-primary-light: #a0ece3;
+  --color-secondary: #326771;
+  --color-secondary-light: #98b3b8;
+  --color-tertiary: #28464b;
+  --color-font-paragraph: #333;
+  --color-font-light: #fff;
+  --font-family: 'Montserrat', sans-serif;
+  --border-radius: 1.25rem;
+}
+
+h1 {
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-tertiary);
+}
+
+span {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.heading_secondary {
+  color: var(--color-tertiary);
+}
+
+.search {
+  color: var(--color-font-search);
+  background-color: var(--color-primary-light);
+}
+
+p {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-font-paragraph);
+}
+
+.cta {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: var(--color-primary);
+  color: var(--color-font-search);
+}
+
+.cta_light {
+  color: var(--color-primary);
 }
