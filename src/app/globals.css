@@ -44,10 +44,6 @@ span {
   font-weight: 700;
 }
 
-.heading_secondary {
-  color: var(--color-tertiary);
-}
-
 .search {
   color: var(--color-font-search);
   background-color: var(--color-primary-light);
