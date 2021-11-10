@@ -68,3 +68,7 @@ p {
 .cta_light {
   color: var(--color-primary);
 }
+
+.sb-show-main.sb-main-padded {
+  padding: 0;
+}

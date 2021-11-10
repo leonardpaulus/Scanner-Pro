@@ -10,7 +10,7 @@ export default function Scan() {
   if (imgUrl === null) {
     img = <ImageInput onImageUpload={(url) => setImgUrl(url)} />;
   } else {
-    img = <img src={imgUrl}></img>;
+    img = <img src={imgUrl} alt="" className={styles.preview}></img>;
   }
 
   return <div className={styles.upload}>{img}</div>;

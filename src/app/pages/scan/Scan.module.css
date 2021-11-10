@@ -3,3 +3,7 @@
   place-items: center;
   height: 100vh;
 }
+
+.preview {
+  max-width: 80vw;
+}
