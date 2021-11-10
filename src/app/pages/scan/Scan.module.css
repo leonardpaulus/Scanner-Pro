@@ -2,8 +2,36 @@
   display: grid;
   place-items: center;
   height: 100vh;
+  grid-template-rows: 20% 50% 15% 15%;
 }
 
 .preview {
   max-width: 80vw;
+}
+
+.button {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: var(--color-primary);
+  color: var(--color-font-light);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: var(--padding-button);
+}
+
+.cta_dark {
+  color: var(--color-tertiary);
+  grid-row: 4;
+}
+
+p {
+  padding: 0 2rem;
+  height: 100%;
+  overflow: scroll;
+}
+
+p::-webkit-scrollbar {
+  display: none;
 }

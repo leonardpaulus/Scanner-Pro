@@ -18,7 +18,7 @@ function ImageInput({ onImageUpload }: ImageInputProps): JSX.Element {
   return (
     <>
       <label className={styles.file_upload}>
-        Upload a Photo
+        <div className={styles.button}>Upload a Photo</div>
         <input type="file" accept="image/*" onChange={handleChange} />
       </label>
     </>

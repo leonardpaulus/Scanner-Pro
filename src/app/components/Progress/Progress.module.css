@@ -1,0 +1,6 @@
+.container {
+  display: grid;
+  row-gap: 0.5rem;
+  justify-items: center;
+  color: var(--color-primary);
+}
