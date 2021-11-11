@@ -32,12 +32,7 @@ export default function Scan() {
       </>
     );
   } else {
-    progressContent = (
-      <Progress
-        progress={recognizeProgress.progress * 100}
-        status={recognizeProgress.status}
-      />
-    );
+    progressContent = <Progress progress={recognizeProgress.progress * 100} />;
   }
 
   if (imgUrl === null) {

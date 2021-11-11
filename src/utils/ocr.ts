@@ -2,9 +2,8 @@ import Tesseract from 'tesseract.js';
 
 export type RecognizeProgress = {
   progress: number;
-  status: string;
 };
-type OnProgress = ({ progress, status }: RecognizeProgress) => void;
+type OnProgress = ({ progress }: RecognizeProgress) => void;
 
 export async function recognizeText(
   url: string,
@@ -14,7 +13,6 @@ export async function recognizeText(
     logger: (message) => {
       onProgress({
         progress: message.progress,
-        status: message.status,
       });
     },
   });

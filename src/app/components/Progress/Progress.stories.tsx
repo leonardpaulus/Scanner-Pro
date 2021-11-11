@@ -6,10 +6,8 @@ export default {
   title: 'Components/Progress',
 };
 
-export const Initializing = () => (
-  <Progress status="Initializing" progress={0.5} />
-);
+export const Initializing = () => <Progress progress={50} />;
 
-export const Done = () => <Progress status="Recognizing" progress={1} />;
+export const Done = () => <Progress progress={100} />;
 
-export const Begin = () => <Progress status="Recognizing" progress={0} />;
+export const Begin = () => <Progress progress={0} />;
