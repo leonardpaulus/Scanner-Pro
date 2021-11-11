@@ -1,0 +1,29 @@
+.button {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: var(--color-primary);
+  color: var(--color-font-light);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: var(--padding-button);
+  cursor: pointer;
+}
+
+input:disabled {
+  background-color: var(--color-primary-light);
+}
+
+.input {
+  font-family: var(--font-family);
+  border: 1px solid;
+  border-color: var(--color-secondary);
+  border-radius: var(--border-radius);
+  padding: var(--padding-button);
+}
+
+.form {
+  display: grid;
+  row-gap: 1rem;
+}

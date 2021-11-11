@@ -29,6 +29,7 @@ body {
   --color-font-light: #fff;
   --font-family: 'Montserrat', sans-serif;
   --border-radius: 1.25rem;
+  --padding-button: 0.7rem 2.5rem;
 }
 
 h1 {
@@ -54,15 +55,6 @@ p {
   font-size: 1rem;
   font-weight: 500;
   color: var(--color-font-paragraph);
-}
-
-.cta {
-  font-family: var(--font-family);
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  background-color: var(--color-primary);
-  color: var(--color-font-search);
 }
 
 .cta_light {
