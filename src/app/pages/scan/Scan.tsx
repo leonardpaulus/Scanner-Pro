@@ -2,18 +2,17 @@ import React, { useState } from 'react';
 import ImageInput from '../../components/ImageInput/ImageInput';
 import styles from './Scan.module.css';
 import Progress from '../../components/Progress/Progress';
-import { recognizeText, RecognizeProgress } from '../../../utils/ocr';
+import AddDocumentForm from '../../components/AddDocumentForm/AddDocumentForm';
+import useRecognizeText from '../../../utils/useRecognizeText';
 
 export default function Scan() {
   const [imgUrl, setImgUrl] = useState<string>('');
-  const [recognizedText, setRecognizedText] = useState<null | string>(null);
-  const [recognizeProgress, setRecognizeProgress] =
-    useState<RecognizeProgress | null>(null);
+  const { text, progress, recognize } = useRecognizeText(imgUrl);
 
   let upload;
   let progressContent;
 
-  if (recognizeProgress === null) {
+  if (progress === null) {
     progressContent = (
       <>
         <img src={imgUrl} alt="" className={styles.preview}></img>
@@ -21,9 +20,7 @@ export default function Scan() {
           className={styles.button}
           onClick={() => {
             if (imgUrl) {
-              recognizeText(imgUrl, setRecognizeProgress).then(
-                setRecognizedText
-              );
+              recognize();
             }
           }}
         >
@@ -32,25 +29,23 @@ export default function Scan() {
       </>
     );
   } else {
-    progressContent = <Progress progress={recognizeProgress.progress * 100} />;
+    progressContent = <Progress progress={progress.progress * 100} />;
   }
 
   if (!imgUrl) {
     upload = (
       <>
         <img src="assets/Logo.png" alt="Scanner Logo" />
-        <ImageInput onImageUpload={(url) => setImgUrl(url)} />;
+        <ImageInput onImageUpload={(url) => setImgUrl(url)} />
       </>
     );
   } else {
     upload = (
       <>
-        {recognizedText ? (
+        {text ? (
           <>
-            <p>{recognizedText}</p>
-            <button className={styles.button} onClick={() => setImgUrl('')}>
-              Scan again
-            </button>
+            <p>{text}</p>
+            <AddDocumentForm text={text} />
           </>
         ) : (
           progressContent
@@ -67,3 +62,4 @@ export default function Scan() {
     </div>
   );
 }
+
