@@ -63,15 +63,3 @@ export default function Scan() {
   );
 }
 
-{
-  /* <button
-  className={styles.button}
-  onClick={() => {
-    setImgUrl('');
-    setRecognizedText(null);
-    setRecognizeProgress(null);
-  }}
->
-  Scan again
-</button>; */
-}
