@@ -5,7 +5,7 @@ import Progress from '../../components/Progress/Progress';
 import { recognizeText, RecognizeProgress } from '../../../utils/ocr';
 
 export default function Scan() {
-  const [imgUrl, setImgUrl] = useState<null | string>(null);
+  const [imgUrl, setImgUrl] = useState<string>('');
   const [recognizedText, setRecognizedText] = useState<null | string>(null);
   const [recognizeProgress, setRecognizeProgress] =
     useState<RecognizeProgress | null>(null);
@@ -35,11 +35,11 @@ export default function Scan() {
     progressContent = <Progress progress={recognizeProgress.progress * 100} />;
   }
 
-  if (imgUrl === null) {
+  if (!imgUrl) {
     upload = (
       <>
         <img src="assets/Logo.png" alt="Scanner Logo" />
-        <ImageInput onImageUpload={(url) => setImgUrl(url)} />
+        <ImageInput onImageUpload={(url) => setImgUrl(url)} />;
       </>
     );
   } else {
@@ -48,7 +48,7 @@ export default function Scan() {
         {recognizedText ? (
           <>
             <p>{recognizedText}</p>
-            <button className={styles.button} onClick={() => setImgUrl(null)}>
+            <button className={styles.button} onClick={() => setImgUrl('')}>
               Scan again
             </button>
           </>
