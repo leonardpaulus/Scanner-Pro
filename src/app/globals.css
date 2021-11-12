@@ -50,7 +50,7 @@ span {
   background-color: var(--color-primary-light);
 }
 
-p {
+textarea {
   font-family: var(--font-family);
   font-size: 1rem;
   font-weight: 500;
