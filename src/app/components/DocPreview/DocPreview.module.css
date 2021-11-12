@@ -1,0 +1,21 @@
+.docpreview__singledocument {
+  width: 100%;
+  display: grid;
+  row-gap: 0.4rem;
+}
+
+.cta_dark {
+  color: var(--color-tertiary);
+}
+
+div::-webkit-scrollbar {
+  display: none;
+}
+
+.preview {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}

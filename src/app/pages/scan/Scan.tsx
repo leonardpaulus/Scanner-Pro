@@ -59,10 +59,9 @@ export default function Scan() {
   }
 
   return (
-    <div className={styles.upload}>
+    <div className={styles.scanPage}>
       <h1>Scanner Pro</h1>
       {upload}
-      <span className={styles.cta_dark}>View Documents</span>
     </div>
   );
 }

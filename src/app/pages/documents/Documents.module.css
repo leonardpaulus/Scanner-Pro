@@ -1,1 +1,15 @@
- ;
+.documentsPage {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  grid-template-rows: 20% 65% 15%;
+}
+
+.docpreview__container {
+  height: 100%;
+  display: grid;
+  row-gap: 1.3rem;
+  overflow: scroll;
+  border: none;
+  width: 80%;
+}
