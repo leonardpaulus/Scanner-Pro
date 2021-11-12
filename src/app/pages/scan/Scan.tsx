@@ -8,6 +8,7 @@ import useRecognizeText from '../../../utils/useRecognizeText';
 export default function Scan() {
   const [imgUrl, setImgUrl] = useState<string>('');
   const { text, progress, recognize } = useRecognizeText(imgUrl);
+  const [editedText, setEditedText] = useState<string>('');
 
   let upload;
   let progressContent;
@@ -44,8 +45,11 @@ export default function Scan() {
       <>
         {text ? (
           <>
-            <p>{text}</p>
-            <AddDocumentForm text={text} />
+            <textarea
+              onChange={(event) => setEditedText(event.target.value)}
+              defaultValue={text}
+            />
+            <AddDocumentForm text={editedText} />
           </>
         ) : (
           progressContent
@@ -62,4 +66,3 @@ export default function Scan() {
     </div>
   );
 }
-

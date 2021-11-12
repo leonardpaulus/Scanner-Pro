@@ -26,12 +26,14 @@
   grid-row: 4;
 }
 
-p {
-  padding: 0 2rem;
-  height: 100%;
+textarea {
+  height: 85%;
+  width: 80%;
   overflow: scroll;
+  border: none;
+  transform: translateY(-10%);
 }
 
-p::-webkit-scrollbar {
+textarea::-webkit-scrollbar {
   display: none;
 }
